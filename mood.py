@@ -4,6 +4,9 @@ from groq import Groq
 
 load_dotenv()
 
+api_key = st.secrets["GROQ_API_KEY"]
+client = Groq(api_key=api_key)
+
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 def get_songs_by_mood(mood):
